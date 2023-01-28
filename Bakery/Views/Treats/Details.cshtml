@@ -15,7 +15,7 @@
 <h5>Quantity:</h5>
 <p>@Html.DisplayFor(model => model.Quantity)</p>
 
-@if (@Model.JoinEntities == 0)
+@if (@Model.JoinEntities.Count == 0)
 {
   <p>This treat is not linked to a flavor yet</p>
 }
@@ -28,7 +28,7 @@ else
       <li>@join.Flavor.Type</li>
       @using (Html.BeginForm("DeleteJoin", "Students"))
       {
-        @Html.HiddenFor("joinId", @join.TreatFlavorId)
+        @Html.Hidden("joinId", @join.TreatFlavorId)
         <input type="submit" value="Delete"/>
       }
     }

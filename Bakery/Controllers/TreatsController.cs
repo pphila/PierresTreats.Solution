@@ -14,8 +14,8 @@ namespace Bakery.Controllers
   [Authorize]
   public class TreatsController : Controller
   {
-    public readonly BakeryContext _db;
-    public readonly UserManager<ApplicationUser> _userManager;
+    private readonly BakeryContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
     public TreatsController(UserManager<ApplicationUser> userManager, BakeryContext db)
     {

@@ -1,0 +1,99 @@
+* {
+  font-weight: 600;
+}
+
+::selection {
+  background: #ffffff;
+  color: #aaf;
+}
+
+body {
+  background-image: url(../img/Bakery_BG.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  background: #ffffff;
+  z-index: 100;
+  padding-top: 50px;
+}
+
+.container {
+  padding-top: 10px;
+  background-color: #ffffff1e;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container li {
+  margin-right: 30px;
+}
+
+li {
+  list-style: none;
+  
+}
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar ul {
+  float: right;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.navbar li {
+  display: inline;
+  float: left;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 25px;
+  transition: 0.5s all;
+}
+
+.navbar a:hover {
+  background: red;
+  color: #ffffff;
+}
+
+.logo {
+  margin: 0;
+  float: left;
+  padding-left: 20px;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+label {
+  padding: 5px;
+}
+
+form label{
+  display: grid;
+}
+
+input {
+  margin: 10px;
+}
+
+.bottom-nav {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ffffffa5;
+  width: auto;
+  padding: 5px;
+}

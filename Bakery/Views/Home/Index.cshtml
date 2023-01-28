@@ -6,6 +6,15 @@
 
 <h3>Here you can catalog all your wild pastry creations</h3>
 
-<p>@Html.ActionLink("Treats", "Index", "Treats")</p>
-<p>@Html.ActionLink("Flavors", "Index", "Flavors")</p>
-<p>@Html.ActionLink("Create or Manage Account", "Index", "Account")</p>
+@if (User.Identity.IsAuthenticated)
+{
+  <h4>Ready To Catalog Your Pastry Experience?</h4>
+
+  <div class="bottom-nav">
+    <p>@Html.ActionLink("Treats", "Index", "Treats") | @Html.ActionLink("Flavors", "Index", "Flavors") | @Html.ActionLink("Create or Manage Account", "Index", "Account")</p>
+  </div>
+}
+else
+{
+  <h4>Please Log In Or Register An Account To Continue</h4>
+}

@@ -36,5 +36,6 @@ else
 }
 
 <hr/>
-
-<p>@Html.ActionLink("Treats", "Index") | @Html.ActionLink("Add a new treat", "Create") | @Html.ActionLink("Edit", "Edit", new { id = Model.TreatId }) | @Html.ActionLink("Delete", "Delete", new { id = Model.TreatId })</p>
+<div class="bottom-nav">
+  <p>@Html.ActionLink("Treats List", "Index") | @Html.ActionLink("Flavors List", "Index", "Flavors") | @Html.ActionLink("Add Treat", "Create") | @Html.ActionLink("Edit", "Edit", new { id = Model.TreatId }) | @Html.ActionLink("Link Flavor", "AddFlavor", new { id = Model.TreatId }) | @Html.ActionLink("Delete", "Delete", new { id = Model.TreatId })</p>
+</div>

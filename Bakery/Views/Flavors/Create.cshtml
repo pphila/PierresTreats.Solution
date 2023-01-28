@@ -12,8 +12,11 @@
   @Html.LabelFor(model => model.Type)
   @Html.TextBoxFor(model => model.Type)
 
-  <input type="submit" value="Add new flavor" class="btn btn-danger"/>
+  <input type="submit" value="Add Flavor" class="btn btn-danger"/>
 }
 
 <hr/>
-<p>@Html.ActionLink("Flavors List", "Index") | @Html.ActionLink("List of Treats", "Index", "Treats")</p>
+
+<div class="bottom-nav">
+  <p>@Html.ActionLink("Flavors List", "Index") | @Html.ActionLink("List of Treats", "Index", "Treats")</p>
+</div>

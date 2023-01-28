@@ -6,7 +6,7 @@
 
 @model LoginViewModel
 
-<h2>Log in with your account</h2>
+<h2>Log In</h2>
 <hr />
 
 @if(!ViewData.ModelState.IsValid)
@@ -21,6 +21,6 @@
 
   @Html.LabelFor(m => m.Password)
   @Html.EditorFor(m => m.Password)
-
-  <input type="submit" value="Log in" />
+  <br/>
+  <input type="submit" value="LOG IN" class="btn btn-danger"/>
 }

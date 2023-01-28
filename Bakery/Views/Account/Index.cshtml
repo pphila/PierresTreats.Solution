@@ -11,7 +11,7 @@
   <p>Welcome to Pierre's Bakery @User.Identity.Name!</p>
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn btn-danger" value="Log out"/>
+    <input type="submit" class="btn btn-danger" value="LOG OUT"/>
   }
 }
 else
@@ -20,5 +20,4 @@ else
   <p>@Html.ActionLink("Register", "Register")</p>
   <p>or</p>
   <p>@Html.ActionLink("Log In", "Login")</p>
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
 }

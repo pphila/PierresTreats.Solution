@@ -15,10 +15,13 @@
   @Html.LabelFor(model => model.Description)
   @Html.TextAreaFor(model => model.Description)
 
+  <p>@Html.ValidationMessageFor(model => model.Name, "", new { @style = "font-weight: 600; color: red;"})</p>
   @Html.LabelFor(model => model.Quantity)
   @Html.TextBoxFor(model => model.Quantity)
 
   <input type="submit" value="Add new treat" class="btn btn-danger"/>
 }
 
-<p>@Html.ActionLink("Treats List", "Index") | @Html.ActionLink("Flavors List", "Index", "Flavors")</p>
+<div class="bottom-nav">
+  <p>@Html.ActionLink("Treats List", "Index") | @Html.ActionLink("Flavors List", "Index", "Flavors")</p>
+</div>

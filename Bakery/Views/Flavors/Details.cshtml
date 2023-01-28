@@ -7,11 +7,11 @@
 
 <h2>Flavor</h2>
 
-<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)
+<h3>@Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(model => model.Type)</h3>
 
 @if (@Model.JoinEntities.Count == 0)
 {
-  <p>There are no flavors created yet.</p>
+  <p>This flavor is not linked to any treats yet.</p>
 }
 else
 {
@@ -31,4 +31,4 @@ else
 
 <hr/>
 
-<p>@Html.ActionLink("Flavors List", "Index") | @Html.ActionLink("List of Treats", "Index", "Treats")</p>
+<p>@Html.ActionLink("Flavors List", "Index") | @Html.ActionLink("List of Treats", "Index", "Treats") | @Html.ActionLink("Link A Treat", "AddTreat", new { id = Model.FlavorId }) </p>

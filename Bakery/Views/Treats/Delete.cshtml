@@ -1,0 +1,16 @@
+@{
+  Layout="_Layout";
+}
+
+@model Bakery.Models.Treat
+
+<h2>Was it that bad?</h2>
+
+@Html.DisplayNameFor(model => mode.Name): @Html.DisplayFor(model => model.Name)
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete"/>
+}
+
+<hr/>
+<p>@Html.ActionLink("Treats List", "Index") | @Html.ActionLink("Flavors List", "Index", "Flavors")</p>

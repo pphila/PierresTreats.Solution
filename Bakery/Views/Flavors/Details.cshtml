@@ -6,7 +6,8 @@
 @model Bakery.Models.Flavor
 
 <h2>Flavor</h2>
-
+<div class="treat-details">
+<hr/>
 <h3>@Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(model => model.Type)</h3>
 
 @if (@Model.JoinEntities.Count == 0)
@@ -28,7 +29,7 @@ else
     }
   </ul>
 }
-
+</div>
 <hr/>
 
 <div class="bottom-nav">

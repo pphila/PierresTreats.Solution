@@ -1,5 +1,6 @@
 * {
   font-weight: 600;
+  font-family: 'Urbanist', sans-serif;
 }
 
 ::selection {
@@ -11,7 +12,6 @@ body {
   background-image: url(../img/Bakery_BG.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 header {
@@ -24,7 +24,7 @@ header {
 
 .container {
   padding-top: 10px;
-  background-color: #ffffff1e;
+  /* background-color: #ffffff1e; */
   color: #ffffff;
   text-align: center;
 }
@@ -88,6 +88,14 @@ form label{
 
 input {
   margin: 10px;
+}
+
+.treat-details{
+  background-color: rgba(0, 0, 0, 0.60);
+  width: 75%;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bottom-nav {

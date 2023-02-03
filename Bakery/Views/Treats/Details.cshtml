@@ -6,36 +6,38 @@
 @model Bakery.Models.Treat
 
 <h2>Treat Info</h2>
+<div class="treat-details">
+  <hr/>
 
-<hr/>
+  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+  <h5>Description:</h5>
+  <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
+  <h5>Quantity:</h5>
+  <p>@Html.DisplayFor(model => model.Quantity)</p>
 
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h5>Description:</h5>
-<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
-<h5>Quantity:</h5>
-<p>@Html.DisplayFor(model => model.Quantity)</p>
-
-@if (@Model.JoinEntities.Count == 0)
-{
-  <p>This treat is not linked to a flavor yet</p>
-}
-else
-{
-  <h4>This Treat's flavors: </h4>
-  <ul>
-    @foreach(TreatFlavor join in Model.JoinEntities)
-    {
-      <li>@join.Flavor.Type</li>
-      @using (Html.BeginForm("DeleteJoin", "Students"))
+  @if (@Model.JoinEntities.Count == 0)
+  {
+    <p>This treat is not linked to a flavor yet</p>
+  }
+  else
+  {
+    <h4>This Treat's flavors: </h4>
+    <ul>
+      @foreach(TreatFlavor join in Model.JoinEntities)
       {
-        @Html.Hidden("joinId", @join.TreatFlavorId)
-        <input type="submit" value="Delete"/>
+        <li>@join.Flavor.Type</li>
+        @using (Html.BeginForm("DeleteJoin", "Treats"))
+        {
+          @Html.Hidden("joinId", @join.TreatFlavorId)
+          <input type="submit" value="Delete"/>
+        }
       }
-    }
-  </ul>
-}
+    </ul>
+  }
+</div>
 
 <hr/>
+
 <div class="bottom-nav">
   <p>@Html.ActionLink("Treats List", "Index") | @Html.ActionLink("Flavors List", "Index", "Flavors") | @Html.ActionLink("Add Treat", "Create") | @Html.ActionLink("Edit", "Edit", new { id = Model.TreatId }) | @Html.ActionLink("Link Flavor", "AddFlavor", new { id = Model.TreatId }) | @Html.ActionLink("Delete", "Delete", new { id = Model.TreatId })</p>
 </div>
